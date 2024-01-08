@@ -24,13 +24,13 @@ body {
     flex-direction: column;
     margin-right: 120px;
 }
-#logo-login {
+#logo-login, #logo-cad{
     width: 151px;
     height: 60px;
     display: flex;
     margin-bottom: 10px;
 }
-#sect-login {
+#sect-login, #sect-cad {
     display: flex;
     height: 400px;
     width: 500px;
@@ -43,10 +43,10 @@ body {
     padding: 30px 40px;
     flex-direction: column;
 }
-#title-entrar {
+#title-entrar, #title-cad {
     font-family: 'Lexend Zetta', sans-serif;
 }
-#txt-login {
+#txt-login, #txt-cad {
     font-family: 'Lexend Zetta', sans-serif;
     font-size: 8pt;
     margin-top: 8px;
