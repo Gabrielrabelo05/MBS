@@ -1,27 +1,38 @@
-function validacaoEmail(field) {
-    usuario = field.value.substring(0, field.value.indexOf("@"));
-    complemento = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
-    
-    if ((usuario.length >=1) &&
-        (complemento.length >=3) &&
-        (usuario.search("@")==-1) &&
-        (complemento.search("@")==-1) &&
-        (usuario.search(" ")==-1) &&
-        (complemento.search(" ")==-1) &&
-        (complemento.search(".")!=-1) &&
-        (complemento.indexOf(".") >=1)&&
-        (complemento.lastIndexOf(".") < complemento.length - 1)) {
-    alert("E-mail valido");
-    }else{
-    alert("E-mail invalido");
-    }}
+function validarEmail(email) {
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regexEmail.test(email);
+}
 
 function validacaoUser() {
-    let valorInput =  document.getElementById('ipt-user').value
+    const usuario = document.getElementById('ipt-user').value;
 
-    if (valorInput.length >= 8) {
-        alert('blz');
-    } else {
-        alert('Usuário prescisa ter 8 caracteres ou menos.');
+    if (!validarTamanhoCampo(usuario, 1, 9)) {
+        alert('O usuário deve ter entre 1 e 8 caracteres.');
+        document.getElementById('ipt-user').value = "";
     }
 }
+
+function validarTamanhoCampo(campo, min, max) {
+    const tamanho = campo.length;
+    return tamanho >= min && tamanho <= max;
+}
+
+function validarFormulario() {
+    const email = document.forms["form"]["email"].value;
+    const senha = document.getElementById('senha').value;
+    const confirmaSenha = document.getElementById('confirmaSenha').value;
+
+    if (!validarEmail(email)) {
+        alert('Por favor, insira um endereço de e-mail válido.');
+        return false;
+    }
+
+    if (!validarTamanhoCampo(senha, 1, 9)) {
+        alert('A senha deve ter entre 1 e 8 caracteres.');
+        return false;
+    }
+    if (senha !== confirmaSenha) {
+        alert('As senhas não coincidem.');
+        return false;
+    }
+    return true; }

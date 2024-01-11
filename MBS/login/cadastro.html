@@ -10,7 +10,7 @@
 <body>
     <main id="main-cadastro">
         <img id="logo-cad" src="../imgs/logo.png" alt="">
-        <form id="sect-cad" name="form">
+        <form id="sect-cad" name="form" onsubmit="return validarFormulario()">
             <h1 id="title-cad">Cadastro</h1>
             <p id="txt-cad">Faça o cadastro para criar sua conta</p>
             <div class="box-input">
@@ -22,11 +22,11 @@
                 <i class='bx bxs-user'></i>
             </div>
             <div class="box-input">
-                <input class="input-login" type="password" placeholder="Senha" required>
+                <input class="input-login" type="password" id="senha" placeholder="Senha" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="box-input">
-                <input class="input-login" type="password" placeholder="Confirme sua senha" required>
+                <input class="input-login" type="password" id="confirmaSenha" placeholder="Confirme sua senha" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <button type="submit" id="btn-cadastro">Criar conta</button>
