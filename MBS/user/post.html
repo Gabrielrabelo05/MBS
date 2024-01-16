@@ -8,8 +8,24 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <img id="logo-post"    src="../imgs/logo.png" alt="">
+    <header class="header">      
+        <a href="#" class="logo">
+           <img  id="logo"   src="../imgs/logo.png"  alt="bms logo">
+        </a>  
+       <nav id="nav-box">               
+           <ul class="navbar-list">
+               <li class="nav-link">
+                   <a href="#home" class="navbar-link-hover-1" data-nav-toggler>Home</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Topicos" class="navbar-link-hover-1" data-nav-toggler>Topicos</a>
+               </li>
+               <li class="nav-link">
+                   <a href="#Recomendados" class="navbar-link-hover-1" data-nav-toggler>Recomendados</a>
+               </li>
+           </ul>
+       </nav>    
+       <a href="" class="bnt-link"><button class="nav-bnt" id="nav-btn" >Voltar</button></a>
     </header>
     <section id="sect-form">
         <form id="select-config"  action="">
@@ -19,7 +35,7 @@
         <form id="form-post" action="">
             <h1 id="title-form">Adicionar postagem</h1>
             <div class="box-input-post">
-                <input class="input-post" type="text" placeholder="Titulo" required>
+                <input class="input-post" type="text" placeholder="Título" required>
             </div>         
             <div class="box-input-post">
                 <select name="" id="select-post">
