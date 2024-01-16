@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBS</title>
     <link rel="stylesheet" href="post.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
         <img id="logo-post"    src="../imgs/logo.png" alt="">
     </header>
     <section id="sect-form">
+        <form id="select-config"  action="">
+            <button class="btn-config"><i class='bx bxs-pencil'></i>Adicionar post</button>
+            <button class="btn-config">Gerenciar postagem</button>
+        </form>
         <form id="form-post" action="">
             <h1 id="title-form">Adicionar postagem</h1>
             <div class="box-input-post">
                 <input class="input-post" type="text" placeholder="Titulo" required>
-            </div>
+            </div>         
             <div class="box-input-post">
-                <input class="input-post" type="text" placeholder="Titulo" required>
-            </div>
-            <div class="box-input-post">
-                <select name="" id="">
+                <select name="" id="select-post">
                     <option value="categoria" data-default disabled selected >Categoria</option>
                     <option value="valor2" >Valor 2</option>
                     <option value="valor3">Valor 3</option>
                     <option value="valor4">Valor 4</option>
                 </select>
+            </div>
+            <div class="box-input-post">
+                <input class="input-post" type="text" placeholder="Corpo" required>
             </div>
             <div class="box-input-post">
                 <input class="input-post" type="file" placeholder="Arquivo" required>

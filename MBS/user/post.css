@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200;600&display=swap');
 * {
     margin: 0;
     border: 0;
@@ -29,9 +30,43 @@ header {
     height: 90px;
 }
 #sect-form {
-    width: 500px;
+    width: 700px;
     height: 400px;
     background-color: #06324D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+#select-config {
+    display: flex;
+    width:35% ;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn-config {
+    background-color: #196FA3;
+    width: 200px;
+    height: 70px;
+    margin-top: 10px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 8pt;
+    color: white;
+    border-radius: 0px 20px 0px 0px;
+    cursor: pointer;
+}
+.btn-config:hover {
+    background-color: #094A71;
+}
+#form-post {
+    margin-right: 50px;
+}
+#title-form {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 15pt;
+    color: white;
 }
 .box-input-post {
     width: 100%;
@@ -39,16 +74,37 @@ header {
     margin: 10px 0;
     position: relative;  
 } 
- .input-post {
+ .input-post, ::placeholder {
     background-color: #094A71;
     width: 100%;
     height: 100%;
-    /* background-color: transparent; */
     border: none;
     outline: none;
-    border: 2px solid rgba( 255,255 ,255 , .2 );
-    border-radius: 15px;
+    border-radius: 10px;
     color: white;
     cursor: pointer;
     transition: 0.3s;  
+    padding-left: 5px;
+}
+#select-post, ::placeholder {
+    background-color: #094A71;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 5px;
+}
+#btn-post {
+    background-color: #009FFF;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+#btn-post:hover {
+    background-color: #094A71;
 }
