@@ -6,8 +6,8 @@ function validarEmail(email) {
 function validacaoUser() {
     const usuario = document.getElementById('ipt-user').value;
 
-    if (!validarTamanhoCampo(usuario, 1, 9)) {
-        alert('O usuário deve ter entre 1 e 8 caracteres.');
+    if (!validarTamanhoCampo(usuario, 1, 16)) {
+        alert('O usuário deve ter entre 1 e 15 caracteres.');
         document.getElementById('ipt-user').value = "";
     }
 }

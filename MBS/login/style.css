@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@200;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: 'Lexend Zetta', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 body {
     display: flex;
@@ -44,11 +44,11 @@ body {
     flex-direction: column;
 }
 #title-entrar, #title-cad {
-    font-family: 'Lexend Zetta', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 #txt-login, #txt-cad {
-    font-family: 'Lexend Zetta', sans-serif;
-    font-size: 8pt;
+    font-family: 'poppins', sans-serif;
+    font-size: 10pt;
     margin-top: 8px;
     margin-bottom: 8px;
 }
