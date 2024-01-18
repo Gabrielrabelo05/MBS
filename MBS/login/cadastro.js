@@ -35,4 +35,5 @@ function validarFormulario() {
         alert('As senhas não coincidem.');
         return false;
     }
-    return true; }
+    return true; 
+}
