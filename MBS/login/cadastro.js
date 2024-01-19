@@ -17,7 +17,6 @@ function validarTamanhoCampo(campo, min, max) {
 function validarFormulario() {
     const email = document.forms["form"]["email"].value;
     const senha = document.getElementById('senha').value;
-    const confirmaSenha = document.getElementById('confirmaSenha').value;
 
     if (!validarEmail(email)) {
         alert('Por favor, insira um endereço de e-mail válido.');
@@ -25,10 +24,6 @@ function validarFormulario() {
     }
     if (!validarTamanhoCampo(senha, 1, 9)) {
         alert('A senha deve ter entre 1 e 8 caracteres.');
-        return false;
-    }
-    if (senha !== confirmaSenha) {
-        alert('As senhas não coincidem.');
         return false;
     }
     return true; 
