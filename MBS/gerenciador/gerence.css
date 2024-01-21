@@ -177,48 +177,40 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
 .table-container {
     max-height: 300px; /* Defina a altura máxima que desejar */
     overflow-y: scroll;
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #094A71;
     border-radius: 10px;
     border-style: hidden;
-    /* border: 1px solid #ddd; */
 }
-
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-family: "poppins";
 }
 th {
     color: #fff;
     font-size: 10pt;
     padding: 20px;
+    font-weight: 600;
+ 
 }
-
 td {
     background-color: #031520;
     color:#fff;
     font-weight: normal;
     font-size: 7pt;
+    
 
 }
-
 .table-container::-webkit-scrollbar {
     width: 8px;               
   }
@@ -231,4 +223,21 @@ td {
     background-color: #031520;    
     border-radius: 20px;       
     border: 3px solid #196FA3;  
+  }
+  #bt-edit-pla {
+    background-color: #009FFF;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "poppins";
+  }
+  #bt-delete-pla {
+    background-color: #890D0D;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "poppins";
+
+  }
+  #name-planilha {
+    font-size: 10pt;
+    font-family: "poppins";
   }
