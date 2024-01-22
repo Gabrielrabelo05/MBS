@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBS</title>
-    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="perfil.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -25,35 +25,31 @@
                </li>
            </ul>
        </nav>    
-       <a href="" class="bnt-link"><button class="nav-bnt" id="nav-btn" >Voltar</button></a>
+       <a href="#post.html" class="bnt-link"><button class="nav-bnt" id="nav-btn" >Voltar</button></a>
     </header>
-    <section id="sect-form">
-        <form id="select-config"  action="">
-            <button type="submit" class="btn-config">Adicionar post</button>
-            <button type="submit" class="btn-config">Gerenciar postagem</button>
-        </form>
-        <form id="form-post" action="">
-            <h1 id="title-form">Adicionar postagem</h1>
-            <div class="box-input-post">
-                <input class="input-post" type="text" placeholder="Título" required>
-            </div>         
-            <div class="box-input-post">
-                <select id="select-post">
-                    <option value="categoria" disabled selected >Categoria</option>
-                    <option value="valor2" >Valor 2</option>
-                    <option value="valor3">Valor 3</option>
-                    <option value="valor4">Valor 4</option>
-                </select>
+    <section id="user-card">
+        <div id="coteiner-user"> 
+            <img  src="../imgs/perfil.png" alt="" id="img-use">
+            <div id="txt-user">
+             <h2>"o importante nao e vencer tosos os disafios,mas lutar sempre"</h2>
+            </div> 
+        </div>
+        <div id="abaut-user">
+            <div id="abaut-user-colum1">
+                <p>rafael solare</p>
+                <p>Acompanhe as atualizações do blog do Motivacional de rafel Solare.</p>
+                <p>Igressou em 22 de Desenbro de 2019</p>
             </div>
-            <div class="box-input-post">
-                <input class="input-post" type="text" placeholder="Corpo" required>
+
+            <div id="abaut-user-colum2">
+                <h6>@rafels-34</h6>
+                <h6>130 seguidores</h6>
+                <h6>78 segindo</h6>
             </div>
-            <div class="box-input-post">
-                <input class="input-post" type="text" placeholder="Link do arquivo" required>
-            </div>
-            <button type="submit" id="btn-post">Publicar</button>
-        </form>
+        </div>
     </section>
+
+
     <footer>
         <div class="footer-container">   
             
@@ -79,6 +75,7 @@
             </div>
         </div>
     </footer>
-    <script src="post.js"></script>
+
+    <script src="perfil.js"></script>
 </body>
 </html>
