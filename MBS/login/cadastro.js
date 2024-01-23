@@ -1,4 +1,4 @@
-function validarEmail(email) {
+function validacaoEmail(email) {
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regexEmail.test(email);
 }
@@ -18,7 +18,7 @@ function validarFormulario() {
     const email = document.forms["form"]["email"].value;
     const senha = document.getElementById('senha').value;
 
-    if (!validarEmail(email)) {
+    if (!validacaoEmail(email)) {
         alert('Por favor, insira um endereço de e-mail válido.');
         return false;
     }
@@ -28,3 +28,36 @@ function validarFormulario() {
     }
     return true; 
 }
+
+async function criarConta() {
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const user = document.getElementById('ipt-user').value;
+
+    const requestBody = {
+        name: email,
+        password: senha,
+        username: user 
+    };
+    try {
+        const response = await fetch('http://localhost:8080/perfil/cadastro', {
+            method: 'POST',
+            mode:'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        if (response.ok) {
+            alert('Conta criada com sucesso!');
+        } else {
+            const errorMessage = await response.text();
+            alert('Erro ao criar conta: ' + errorMessage);
+        }
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+    }
+}
+
+

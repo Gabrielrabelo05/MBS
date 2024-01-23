@@ -21,15 +21,15 @@
                 <input class="input-login" id="ipt-user"  type="text" placeholder="Usuário" name="user" onblur="validacaoUser()" required>
                 <i class='bx bxs-user'></i>
             </div>
-            <div class="box-input">
+            <!-- <div class="box-input">
                 <input class="input-login" id="ipt-foto"  type="text" placeholder="Endereço de imagem"  id="foto" name="nome">
                 <i class='bx bx-image-alt'></i>
-            </div>
+            </div> -->
             <div class="box-input">
                 <input class="input-login" type="password" id="senha" placeholder="Senha" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <button type="submit" id="btn-cadastro">Criar conta</button>
+            <button type="button" id="btn-cadastro" onclick="criarConta()">Criar conta</button>
         </form>
     </main>
     <script src="cadastro.js"></script>
