@@ -35,9 +35,9 @@ async function criarConta() {
 
     const requestBody = {
         email: email,
-        password: senha,
-        username: user ,
-        photo:null
+        senha: senha,
+        username: user,
+        ftuser: null
 
     };
     try {
