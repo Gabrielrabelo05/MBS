@@ -34,10 +34,10 @@ async function criarConta() {
     const user = document.getElementById('ipt-user').value;
 
     const requestBody = {
-        username: email,
-        senha: senha,
-        name: user ,
-        ftuser:null
+        email: email,
+        password: senha,
+        username: user ,
+        photo:null
 
     };
     try {
