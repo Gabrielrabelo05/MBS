@@ -2,14 +2,7 @@ function validacaoEmail(email) {
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regexEmail.test(email);
 }
-function validacaoUser() {
-    const usuario = document.getElementById('ipt-user').value;
-
-    if (!validarTamanhoCampo(usuario, 1, 16)) {
-        alert('O usuário deve ter entre 1 e 15 caracteres.');
-        document.getElementById('ipt-user').value = "";
-    }
-}
+  
 function validarTamanhoCampo(campo, min, max) {
     const tamanho = campo.length;
     return tamanho >= min && tamanho <= max;
@@ -17,6 +10,7 @@ function validarTamanhoCampo(campo, min, max) {
 function validarFormulario() {
     const email = document.forms["form"]["email"].value;
     const senha = document.getElementById('senha').value;
+    const usuario = document.getElementById('ipt-user').value;
 
     if (!validacaoEmail(email)) {
         alert('Por favor, insira um endereço de e-mail válido.');
@@ -26,6 +20,11 @@ function validarFormulario() {
         alert('A senha deve ter entre 1 e 8 caracteres.');
         return false;
     }
+    if (!validarTamanhoCampo(usuario, 1, 16)) {
+        alert('O usuário deve ter entre 1 e 15 caracteres.');
+        document.getElementById('ipt-user').value = "";
+    }
+
     return true; 
 }
 
@@ -35,14 +34,16 @@ async function criarConta() {
     const user = document.getElementById('ipt-user').value;
 
     const requestBody = {
-        name: email,
-        password: senha,
-        username: user 
+        username: email,
+        senha: senha,
+        name: user ,
+        ftuser:null
+
     };
     try {
+        if (validarFormulario()){
         const response = await fetch('http://localhost:8080/perfil/cadastro', {
             method: 'POST',
-            mode:'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -55,7 +56,7 @@ async function criarConta() {
             const errorMessage = await response.text();
             alert('Erro ao criar conta: ' + errorMessage);
         }
-    } catch (error) {
+    } }catch (error) {
         console.error('Erro na requisição:', error);
     }
 }
