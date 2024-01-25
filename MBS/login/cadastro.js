@@ -35,9 +35,9 @@ async function criarConta() {
 
     const requestBody = {
         email: email,
-        senha: senha,
+        password: senha,
         username: user,
-        ftuser: null
+        photo: null
 
     };
     try {
@@ -51,7 +51,7 @@ async function criarConta() {
         });
 
         if (response.ok) {
-            alert('Conta criada com sucesso!');
+            console.log('Conta criada com sucesso!');
         } else {
             const errorMessage = await response.text();
             alert('Erro ao criar conta: ' + errorMessage);

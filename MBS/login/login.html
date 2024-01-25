@@ -14,14 +14,14 @@
             <h1 id="title-entrar">Entrar</h1>
             <p id="txt-login">Faça login para gerenciar sua conta</p>
             <div class="box-input">
-                <input class="input-login" type="email" name="email" placeholder="Email" required>
-                <i class='bx bx-envelope'></i>
+                <input class="input-login" id="usuario-log" type="text" name="email" placeholder="Usuário" required>
+                <i class='bx bxs-user'></i>
             </div>
             <div class="box-input">
-                <input class="input-login" type="password" placeholder="Senha" required>
+                <input class="input-login" id="senha-log" type="password" placeholder="Senha" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <button type="submit" id="btn-login">Entrar</button>
+            <button type="submit" id="btn-login" onclick="realizarLogin()" >Entrar</button>
             <div id="register-user">
                 <p id="cadrasto-user">Não possui conta? <a href="cadastro.html" id="link-register">Registre-se</a></p>
             </div>
