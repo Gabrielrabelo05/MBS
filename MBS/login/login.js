@@ -1,39 +1,29 @@
-// const apiLog = "http://localhost:8080/perfil/login"
-function realizarLogin() {
+// async function fazerLogin() {
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
 
-    const usuarioInput = document.getElementById('usuario-log').value;
-    const senhaInput = document.getElementById('senha-log').value;
+//     const requestBody = {
+//         username: username,
+//         password: password
+//     };
 
-    
-    const dadosUsuario = {
-      usuario: usuarioInput,
-      senha: senhaInput,
-    };
+//     try {
+//         const response = await fetch('http://localhost:8080/perfil/login', {
+//             method: 'GET',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(requestBody)
+//         });
 
-    const urlAPI = 'http://localhost:8080/perfil/login';
-    const configuracaoRequisicao = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dadosUsuario),
-    };
-
-    // Fazendo a requisição usando fetch()
-    fetch(urlAPI, configuracaoRequisicao)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Erro ao autenticar usuário');
-        }
-        return response.json();
-      })
-      .then(dados => {
-        // Manipula os dados recebidos da API (por exemplo, token de autenticação)
-        console.log(dados);
-        // Implemente lógica adicional conforme necessário
-      })
-      .catch(erro => {
-        console.error('Erro ao fazer a requisição:', erro);
-        // Implemente lógica para lidar com erros de autenticação
-      });
-  }
+//         if (response.ok) {
+//             console.log('Login bem-sucedido!');
+//             // Faça o redirecionamento ou outra ação necessária após o login
+//         } else {
+//             const errorMessage = await response.text();
+//             alert('Erro ao fazer login: ' + errorMessage);
+//         }
+//     } catch (error) {
+//         console.error('Erro na requisição:', error);
+//     }
+// }

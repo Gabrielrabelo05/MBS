@@ -62,3 +62,15 @@ async function criarConta() {
 }
 
 
+// function redirecionarParaLogin(username, password) {
+    
+//     const queryParams = `?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+//     window.location.href = `http://localhost:8080/perfil/login${queryParams}`;
+// }
+// if (response.ok) {
+//     console.log('Conta criada com sucesso!');
+//     redirecionarParaLogin(username, password);
+// } else {
+//     const errorMessage = await response.text();
+//     alert('Erro ao criar conta: ' + errorMessage);
+// }
